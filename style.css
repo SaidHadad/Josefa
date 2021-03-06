@@ -9,8 +9,9 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 .flexparent-1,
-.flexparent-maisn {
+.flexparent-main {
 	display: flex;
+	flex-direction: column;
 }
 
 .wrapper {
@@ -66,7 +67,7 @@ header {
 }
 
 
-.folding{
+.highlight{
 	font-weight: bolder;
 	color: coral;
 	text-decoration: underline;
@@ -81,6 +82,7 @@ header {
 	text-align: center;
 }
 
+
 /************************************************  MAIN *************************************/
 img {
 	max-width: 100%;
@@ -91,7 +93,7 @@ main {
 .ul2 {
 	display: flex;
 	padding: 0;
-	justify-content: space-between;
+	justify-content: space-around;
 	width: -webkit-fill-available;
 }
 
@@ -108,30 +110,68 @@ a {
 nav {
 	display: flex;
 	background-color: gray;
-	justify-content: space-between;
 }
 
-.ingredients,
-.equipment,
 .process,
 .story,
 .schedule,
 .result {
 	background-color: white;
+	padding: 0px 20px;
+}
+
+figure {
+	margin: auto;
 }
 
 /* story container */
-/* ingridients container */
+blockquote {
+	border-left: solid;
+    border-color: coral;
+    padding-left: 10px;
+}
+
+/***** side bar container *****/
+
+.sidebar {
+	background-color: white;
+	order: 0;
+	padding: 0px 20px;
+}
+.imgstory {
+	height: 250px;
+}
+/* ingredients container */
+
+.ingredientsul {
+	display: flex;
+    list-style: none;
+    width: 100px;
+    padding: 0;
+    border-style: groove;
+    border-radius: 10px;
+    justify-content: space-evenly;
+}
+
+
 /* equipment container */
+
+
 /* process container */
 
+/* schedule container */
 
+/* result container */
+
+/* footer */
 /************************************************ MEDIA *************************************/
 @media(max-width: 550px) {
+
 	.ul1 {
 		max-width: 300px;
 		flex-direction: column;
 	}
+
 	.li1{
 		display: block;
 	}
@@ -143,7 +183,11 @@ nav {
 	}
 	
 	nav {
-		padding: 0px 20px 0px 20px
+		padding: 0px 20px 0px 20px;
+	}
+
+	.ul2 {
+		flex-direction: column;
 	}
 }
 
